@@ -1,4 +1,9 @@
 ![Article Forge](/assets/articleforge_small.png)
+
+<div style="text-align: center;">
+  <img src="/assets/articleforge_small.png" alt="Description of Image" style="display: block; margin: 0 auto;">
+</div>
+
 ## Copilot Studio Agent (Article Forge)
 
 **Article Forge** is a deterministic Knowledge Base (KB) documentation generator built in **Microsoft Copilot Studio**, with a secure **Azure Functions** publishing boundary.
