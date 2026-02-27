@@ -1,8 +1,9 @@
 ![Article Forge](/assets/articleforge_small.png)
 
-<div style="text-align: center;">
-  <img src="/assets/articleforge_small.png" alt="Description of Image" style="display: block; margin: 0 auto;">
-</div>
+<p align="center">
+  <img src="https://github.com/GeorgiaGit/AgentForce/assets/articleforge_small.png" alt="Description of Image"/>
+</p>
+
 
 ## Copilot Studio Agent (Article Forge)
 
