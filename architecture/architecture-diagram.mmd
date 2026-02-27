@@ -1,0 +1,27 @@
+
+flowchart TB
+  U[User\nScenario text OR Rough-draft PDF] --> CS["Copilot Studio Agent\nArticle Forge (KB Orchestrator)"]
+
+  subgraph CSO[Copilot Studio Orchestration]
+    CS --> R[KB – Entry Router\nAmbiguity Rules + Deterministic Formatting]
+    R --> O1["Output 1\nMSP KB Article (Markdown)\nCanonical"]
+    R --> O2[Output 2\nSharePoint Page Content\nPlain text]
+    R --> O3[Output 3\nWord Doc Content\nTemplate-ready plain text]
+  end
+
+  subgraph G["Grounding Sources (Conceptual)"]
+    ED["Enterprise knowledge\n(approved internal docs/KB)"]:::src
+    MS["Microsoft authoritative resources\n(product behavior, UI labels, caveats)"]:::src
+    GK["General technical knowledge\n(safe patterns for common issues)"]:::src
+  end
+
+  CS --- ED
+  CS --- MS
+  CS --- GK
+
+  O1 --> REV["Review / Approval\n(IT knowledge owner)"]
+  O2 --> PUB[Publish Trigger\nUser selects Continue]
+  PUB --> AF[Azure Function\nPublishKbToSharePoint]
+  AF --> SP[SharePoint KB Site\nPage created/updated]
+
+  classDef src fill:#f6f8fa,stroke:#1f4e79,stroke-width:1px;
