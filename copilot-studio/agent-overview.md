@@ -224,5 +224,5 @@ Recommended repo artifacts:
 (Optional) Demo video link: TBD
 
 ---
-- **Back to ReadMe :** [`ReadMe.md`](README.md)
+- **Back to ReadMe :** [`ReadMe.md`](../README.md)
 
