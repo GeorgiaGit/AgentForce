@@ -13,8 +13,9 @@ into **publication-ready KB content** using a strict three-output contract:
 3) Word Document Content (template-ready plain text)
 
 ### Key docs
-- **Copilot Studio overview (judge-ready):** [`copilot-studio/agent-overview.md`](copilot-studio/agent-overview.md)
+- **Copilot Studio overview :** [`copilot-studio/agent-overview.md`](copilot-studio/agent-overview.md)
 - **Architecture diagram:** [`architecture/architecture-diagram.mmd`](architecture/architecture-diagram.mmd)  
+- **Azure Function Overview:** [`VSCode/copilot-easy-auth-alignment-runbook.md`](VSCode/copilot-easy-auth-alignment-runbook.md)  
   (Optional PNG export: `architecture/architecture-diagram.png`)
 
 ### Security note (public repo)
