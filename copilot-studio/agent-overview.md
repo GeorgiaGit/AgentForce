@@ -1,5 +1,7 @@
 
-![Article Forge](/assets/articleforge_small.png)
+<p align="center">
+  <img src="https://github.com/GeorgiaGit/AgentForce/blob/main/assets/articleforge_small.png" alt="Description of Image"/>
+</p>
 
 # Copilot Studio Agent Overview
 
@@ -222,5 +224,5 @@ Recommended repo artifacts:
 (Optional) Demo video link: TBD
 
 ---
-
+- **Back to ReadMe :** [`ReadMe.md`](README.md)
 
