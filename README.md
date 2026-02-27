@@ -1,7 +1,5 @@
-![Article Forge](/assets/articleforge_small.png)
-
 <p align="center">
-  <img src="https://github.com/GeorgiaGit/AgentForce/assets/articleforge_small.png" alt="Description of Image"/>
+  <img src="https://github.com/GeorgiaGit/AgentForce/blob/main/assets/articleforge_small.png" alt="Description of Image"/>
 </p>
 
 
