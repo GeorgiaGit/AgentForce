@@ -1,4 +1,4 @@
-
+![Article Forge](/assets/articleforge_small.png)
 ## Copilot Studio Agent (Article Forge)
 
 **Article Forge** is a deterministic Knowledge Base (KB) documentation generator built in **Microsoft Copilot Studio**, with a secure **Azure Functions** publishing boundary.

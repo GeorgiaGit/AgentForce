@@ -1,5 +1,5 @@
 
-![Article Forge](/assets/articleforge.png)
+![Article Forge](/assets/articleforge_small.png)
 
 # Copilot Studio Agent Overview
 
