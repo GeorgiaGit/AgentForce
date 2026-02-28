@@ -123,7 +123,7 @@ The agent is organized around deterministic routing and generation.
 |---|---|---|
 | KB – Entry Router | Routes user intent to KB generation flow | Used to initiate KB draft creation and enforce minimal ambiguity handling |
 | Scenario-to-KB | Converts a typed scenario into KB outputs | Applies output enforcement rules and style constraints |
-| PDF Draft-to-KB | Converts a rough-draft PDF into KB outputs | Extracts + normalizes steps; fills gaps using grounded knowledge |
+| PDF Draft-to-KB | Converts a rough-draft PDF into KB outputs | Extracts + normalizes steps; fills gaps using grounded knowledge using AI Builder|
 | Publish / Create KB Page | Sends SharePoint page content to backend | Designed for an Azure Function publish endpoint |
 | Fallback / Ambiguity Handling | Asks minimum required question(s) | Only used when missing platform/version/scope blocks safe long-form output |
 
@@ -131,7 +131,7 @@ The agent is organized around deterministic routing and generation.
 
 ## 6. Outputs (Core Contract)
 
-Article Forge’s key differentiator is its **strict three-output contract**.
+Article Forge’s key differentiator is its **strict three-output contract**.  This is 
 
 ### Output 1 — MSP KB ARTICLE (Markdown)
 
@@ -171,13 +171,12 @@ Backend actions are used for publication and (optionally) structured storage.
 
 ```json
 {
-  "title": "string",
-  "category": "string",
-  "output1_markdown": "string",
-  "output2_sharepointText": "string",
-  "output3_wordText": "string",
-  "sourceType": "scenario | pdf",
-  "sourceNotes": "string"
+  "pageTitle": "string",
+  "siteUrl": "string",
+  "htmlContent": "string",
+  //"output1_markdown": "string",
+  //"output2_sharepointText": "string",
+  //"output3_wordText": "string",
 }
 ```
 
@@ -186,21 +185,13 @@ Backend actions are used for publication and (optionally) structured storage.
 - **Purpose**: Create/update a SharePoint page using Output 2 (plain text)
 - **Backend**: Azure Function → SharePoint page creation
 
-**Input schema (example):**
-
-```json
-{
-  "pageTitle": "string",
-  "pageBody": "string",
-  "tags": ["string"],
-  "revision": "string"
-}
-```
+-Call Microsoft Graph to generate the page, leave in draft form for human review before publishing
 
 **Security model:**
 
 - No secrets in Copilot Studio
 - Backend authentication/authorization handled in Azure
+- Copilot Studio to API: Easy Auth
 - Logs avoid sensitive payloads; use correlation IDs
 
 ---
